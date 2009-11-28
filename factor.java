@@ -1,8 +1,11 @@
+
+
 import java.util.*;
 
 public class factor
 {
 	int factorValue;
+	String strFactor;
 	
 			//generate a random number between 1 and 10
 	
@@ -14,9 +17,11 @@ public class factor
 		factorValue = inFactor +r;
 	}
 	
-	int getFactor()
+	String getFactor()
 	{
-		return(factorValue);
+		
+    String strFactor = Integer.toString(factorValue);
+		return(strFactor);
 	}
 	
 	void updateFactor(int upFactor)
