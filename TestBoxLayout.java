@@ -15,12 +15,24 @@ import javax.swing.JTextArea;
 
 public class TestBoxLayout {
 	
+	static factor social;
+	static factor science;
+	 static factor military;
+	static factor economy;
 	
+	static void init()
+	{
+		social=new factor();
+	}
 	
-    public static void addComponentsToPane(Container pane) {
-        pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
+
+	
+    public static void addComponentsToPane(Container pane)
+	 { 
+        
+		pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
 		addAButton("Button 1", pane);
-	    addATextArea("socialFactor", pane);
+	    addATextArea(social.getFactor(), pane);
         addAButton("Button 3", pane);
         addAButton("Long-Named Button 4", pane);
         addAButton("5", pane);
@@ -63,19 +75,9 @@ public class TestBoxLayout {
 	
 	
 		//create objects
-	factor social 	= new factor();
-	factor science 	= new factor();
-	factor economy 	= new factor();
-	factor military	= new factor();
 	
-		social.setFactor(10);
-		science.setFactor(15);
-	
-	//set initial values
-	
-	
-	
-	String socialFactor=social.getFactor();
+		init();
+		social.setFactor(20);
 		
         //Schedule a job for the event-dispatching thread:
         //creating and showing this application's GUI.
